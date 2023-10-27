@@ -27,7 +27,7 @@
     }
 
     function renderTodo(todo) {
-        const {id, userId, title, complete} = todo;
+        const {id, userId, title, completed} = todo;
         const li = document.createElement('li');
         li.dataset.id = id;
         li.innerHTML = `
@@ -40,7 +40,7 @@
 
         const option = document.createElement('input')
         option.type = 'checkbox'
-        option.checked = complete
+        option.checked = completed
         option.addEventListener('change', todoChange)
 
         label.prepend(option)
